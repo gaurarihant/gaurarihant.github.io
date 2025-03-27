@@ -1,0 +1,506 @@
+<!DOCTYPE HTML>
+<!--
+	Big Picture by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Chaos in Harmony</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+		<!-- <link rel="stylesheet" href="https://cdn.knightlab.com/libs/juxtapose/latest/css/juxtapose.css"> -->
+		<!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" /> -->
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<header id="header">
+				<h1>NeoTracer</h1>
+				<nav>
+					<ul>
+						<li><a href="#intro">Introduction</a></li>
+						<!-- <li><a href="#one">Poster</a></li> -->
+						<li><a href="#two">Story</a></li>
+						<li><a href="#behind">Features</a></li>
+						<li><a href="#statistics">Statistics</a></li>
+						<li><a href="#references">Assets</a></li>
+						<li><a href="#challenges">Challenges</a></li>
+						<li><a href="#credits">Credits</a></li>
+					</ul>
+				</nav>
+			</header>
+
+		<!-- Intro -->
+			<section id="intro" class="main style1 dark fullscreen">
+				<div class="content">
+					<header>
+						<h2>A Stroll Through the Blinding Lights of Cyber City</h2>
+					</header>
+					<p>Rendered with NeoTracer, by <a href="https://www.linkedin.com/in/kshitij-kumar-ba7965192/">Kshitij</a> and <a href="https://gaurarihant.github.io/">Arihant</a>.</p>
+					<footer>
+						<a href="#story" class="button style2 down">More</a>
+					</footer>
+				</div>
+			</section>
+
+		<!-- Two -->
+			<!-- <section id="two" class="main style2 left dark fullscreen">
+				<div class="content box style2">
+					<header>
+						<h2>Story</h2>
+					</header>
+					<p>Lorem Ipsum</p>
+				</div>
+				<a href="#behind" class="button style2 down anchored">Next</a>
+			</section> -->
+
+			<section id="two" class="main style2 dark fullscreen">
+				<!-- Story Text Window (Left) -->
+				<div class="content box style2 story-text">
+					<header>
+						<h2>Story</h2>
+					</header>
+					<p>Our scene showcases a glimpse of a cyberpunk-inspired city, populated with high-rise buildings, 
+						with neon lights breathing life into it. Our city lies amidst dense fog, which adds to the eerie vibe of 
+						our scene. The harmonious combination of the neon signs and buildings while showering in the ominous, 
+						chaotic fog looming over the city encapsulates the theme of this rendering competition. 
+						A person residing within the scene might have their visual sensors chaotically overstimulated, but 
+						couldn't get enough of the eye-candy which our scene has to offer. <br> 
+						Click the image on the right to be redirected to full image <i class="fas fa-arrow-right"></i> </p>
+				</div>
+			
+				<!-- Story Image Window (Right) -->
+				<div class="content box style2 story-image">
+					<header>
+						<h2>Scene</h2>
+					</header>
+					<a href="#image-modal" class="image-link">
+						<img src="images/one.jpg" alt="Story Image" />
+					</a>
+				</div>
+			
+				<a href="#behind" class="button style2 down anchored">Next</a>
+			</section>
+
+		<!-- Slider Section -->
+		<!-- Flex Container for Side-by-Side Sections -->
+		<section id="behind" class="main style3 primary">
+			<div class="flex-container">
+				<!-- Shading Normals Section -->
+				<div id="shading" class="flex-item">
+					<header>
+						<h2>Shading Normals</h2>
+						<p>Allowed adding texture details on meshes without additional complication</p>
+					</header>
+					<div class="slider-container">
+						<!-- JuxtaposeJS Slider -->
+						<div class="juxtapose" data-interaction="hover">
+							<img src="images/thumbs/cornell_bunny.png" data-label="Without"/>
+							<img src="images/thumbs/cornell_bunny_shadingnormal.png" data-label="With"/>
+						</div>
+					</div>
+				</div>
+
+				<!-- Rough Dielectric Section -->
+				<div id="rough" class="flex-item">
+					<header>
+						<h2>Rough Dielectric</h2>
+						<p>Provided photorealism by adding frosting to glass dielectric as shown below</p>
+					</header>
+					<div class="slider-container">
+						<!-- JuxtaposeJS Slider -->
+						<div class="juxtapose" data-interaction="hover">
+							<img src="images/thumbs/cornell_bunny_dielectric.png" data-label="Glass"/>
+							<img src="images/thumbs/cornell_bunny_frosted_05.png" data-label="Frosted Glass"/>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section id="area" class="main style3 primary">
+			<div class="flex-container">
+				<!-- Shading Normals Section -->
+				<div id="area" class="flex-item">
+					<header>
+						<h2>Area Lights</h2>
+						<p>Not only did it light up the scene in a more photorealistic fashion, but also 
+							reduced the overall noise as shown</p>
+					</header>
+					<div class="slider-container">
+						<!-- JuxtaposeJS Slider -->
+						<div class="juxtapose" data-interaction="hover">
+							<img src="images/thumbs/bunny_noarea.png" data-label="Without"/>
+							<img src="images/thumbs/bunny_areauniform.png" data-label="With"/>
+						</div>
+					</div>
+				</div>
+
+				<!-- Rough Dielectric Section -->
+				<div id="area-improved" class="flex-item">
+					<header>
+						<h2>Improved Area Lights</h2>
+						<p>Simply changing the PDF sampling schema to subtended cone sampling 
+							reduced the noise further</p>
+					</header>
+					<div class="slider-container">
+						<!-- JuxtaposeJS Slider -->
+						<div class="juxtapose" data-interaction="hover">
+							<img src="images/thumbs/bunny_areauniform.png" data-label="Uniform"/>
+							<img src="images/thumbs/bunny_areaimproved.png" data-label="Improved"/>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section id="advanced" class="main style3 primary">
+			<div class="flex-container">
+				<!-- Multiple Importance Sampling -->
+				<div id="mis" class="flex-item">
+					<header>
+						<h2>MIS Path Tracer</h2>
+						<p>We show our results from a test case by Eric Veach. This demonstrates 
+							improved sampling along the areal emissions</p>
+					</header>
+					<div class="slider-container">
+						<!-- JuxtaposeJS Slider -->
+						<div class="juxtapose" data-interaction="hover">
+							<img src="images/thumbs/mistest_nomis.png" data-label="Without"/>
+							<img src="images/thumbs/mistest_mis.png" data-label="With"/>
+						</div>
+					</div>
+				</div>
+
+				<!-- Homogeneous Participating Medium -->
+				<div id="fog" class="flex-item">
+					<header>
+						<h2>Homogeneous Fog Tracer</h2>
+						<p>Respecting our overall cyberpunk theme, we added fog to our scene with a 
+							volume tracer that allows for handling homogeneous participating media</p>
+					</header>
+					<div class="slider-container">
+						<!-- JuxtaposeJS Slider -->
+						<div class="juxtapose" data-interaction="hover">
+							<img src="images/thumbs/miniscene_nofog.png" data-label="No Fog"/>
+							<img src="images/thumbs/miniscene_fog.png" data-label="White Fog"/>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section id="postprocess" class="main style3 primary">
+			<div class="flex-container">
+				<!-- Multiple Importance Sampling -->
+				<div id="denoise" class="flex-item">
+					<header>
+						<h2>Image Denoising</h2>
+						<p>Using Open Image Denoise Library (OIDN) from Intel, we reduce the noise 
+							further from our scene</p>
+					</header>
+					<div class="slider-container">
+						<!-- JuxtaposeJS Slider -->
+						<div class="juxtapose" data-interaction="hover">
+							<img src="images/thumbs/finalscene_noisy.png" data-label="Without"/>
+							<img src="images/thumbs/finalscene_denoised.png" data-label="With"/>
+							<!-- <img src="images/thumbs/finalscene_noisy.png" data-label="Without"/>
+							<img src="images/thumbs/finalscene_denoised.png" data-label="With"/> -->
+						</div>
+					</div>
+				</div>
+
+				<!-- Homogeneous Participating Medium -->
+				<div id="bloom" class="flex-item">
+					<header>
+						<h2>Postprocessing</h2>
+						<p>Adding bloom at the end makes light emissions and reflections even 
+							more realistic</p>
+					</header>
+					<div class="slider-container">
+						<!-- JuxtaposeJS Slider -->
+						<div class="juxtapose" data-interaction="hover">
+							<img src="images/thumbs/finalscene_denoised.png" data-label="Original"/>
+							<img src="images/thumbs/finalscene_bloom.png" data-label="Bloomed"/>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+
+		<!-- <section id="middle-section" class="main style3 primary">
+			<div class="flex-container-middle">
+				<div class="flex-item-spacer"></div>
+
+				<section id="denoising" class="flex-item">
+					<div class="content">
+						<header>
+							<h2>Image Denoising</h2>
+							<p>Lorem ipsum dolor sit amet et sapien sed elementum egestas dolore condimentum.
+							Fusce blandit ultrices sapien, in accumsan orci rhoncus eu. Sed sodales venenatis
+							arcu, id varius justo euismod in. Curabitur egestas consectetur magna vitae.</p>
+						</header>
+						<div class="slider-container">
+							<div class="juxtapose" data-interaction="hover">
+								<img src="images/thumbs/cornell_bunny.png" data-label="Without"/>
+								<img src="images/thumbs/cornell_bunny_denoised.png" data-label="With"/>
+							</div>
+						</div>
+					</div>
+				</section>
+				<div class="flex-item-spacer"></div>
+			</div>
+		</section> -->
+		<!-- Statistics Section -->
+		<section id="statistics" class="main style3 primary">
+			<div class="content">
+				<header>
+					<h2>Statistics</h2>
+					<p>Key metrics and performance data for the renderer.</p>
+				</header>
+				<div class="stats-grid">
+					<!-- Hours Rendered -->
+					<div class="stats-item">
+						<i class="fas fa-clock stats-icon"></i>
+						<h3>Render Time</h3>
+						<p>4 hours 17 minutes</p>
+					</div>
+					<!-- Light Sources -->
+					<div class="stats-item">
+						<i class="fas fa-lightbulb stats-icon"></i>
+						<h3>Light Sources</h3>
+						<p>6</p>
+					</div>
+					<!-- Samples per Pixel -->
+					<div class="stats-item">
+						<i class="fas fa-cube stats-icon"></i>
+						<h3>Samples per Pixel</h3>
+						<p>512</p>
+					</div>
+					<!-- Total Sample Count -->
+					<div class="stats-item">
+						<i class="fas fa-image stats-icon"></i>
+						<h3>Resolution</h3>
+						<p>2565x1440 pixels</p>
+					</div>
+
+					<div class="stats-item">
+						<i class="fas fa-microchip stats-icon"></i>
+						<h3>Hardware</h3>
+						<p>Ryzen 7 7840HS 16GB RAM</p>
+					</div>
+					<!-- Total Sample Count -->
+					<div class="stats-item">
+						<i class="fas fa-draw-polygon stats-icon"></i>
+						<h3>Meshes</h3>
+						<p>2.79 Million</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section id="references" class="main style3 primary">
+			<div class="content">
+				<header>
+					<h2>Assets</h2>
+					<p>External assets and resources used to create the scenes.</p>
+				</header>
+				<div class="references-grid">
+					<!-- Reference 1 -->
+					<div class="reference-item">
+						<div class="reference-text">
+							<h3>Enormous26</h3>
+							<p><a href="https://enormous26.gumroad.com/l/jKWIW" target="_blank">Gumroad</a></p>
+							<p>Neon lights</p>
+						</div>
+					</div>
+
+					<div class="reference-item">
+						<div class="reference-text">
+							<h3>CGTrader</h3>
+							<p><a href="https://www.cgtrader.com/free-3d-models/car/luxury-car/neon-street-car-scene-animated">CGTrader</a></p>
+							<p>More neon lights</p>
+						</div>
+					</div>
+
+					<!-- Reference 2 -->
+					<div class="reference-item">
+						<div class="reference-text">
+							<h3>Kitbash3D</h3>
+							<p><a href="https://kitbash3d.com/products/mini-kit-neo-city">Kitbash3D</a></p>
+							<p>Obtained tall building assets</p>
+						</div>
+					</div>
+
+					<div class="reference-item">
+						<div class="reference-text">
+							<h3>CGTrader</h3>
+							<p><a href="https://www.cgtrader.com/free-3d-models/exterior/street-exterior/urban-trash-with-garbage-bags-4a5d7703-b444-4279-af98-cfce7bd9b827" target="_blank">CGTrader</a></p>
+							<p>Urban trash set</p>
+						</div>
+					</div>
+
+					<!-- Reference 4 -->
+					<div class="reference-item">
+						<div class="reference-text">
+							<h3>Polyhaven</h3>
+							<p><a href="https://polyhaven.com/a/asphalt_02">Polyhaven</a></p>
+							<p>Ground asphalt</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section id="challenges" class="main style3 primary">
+			<div class="content">
+				<header>
+					<h2>Challenges</h2>
+					<p>One of the key challeges we faced was to get volume path 
+						tracing for homogeneous media to work. As opposed to 
+						PBRT's implementation of attaching medium property to the ray, 
+						we took an instance-centric approach where our scene lies in a cube 
+						having medium property associated with it. We explicitly track and 
+						maintain number of bounces in the cube instance to determine entry and exit 
+						from the media. Since we do not use localized homogeneous media, this 
+						hack suffices for our use case. <br>
+						We also faced minor issues with getting improved area light sampling to work 
+						alongside MIS path tracer. We had to ensure that PDFs were computed and returned in the 
+						right domain, specifically conversions between spatial and angular domains.
+					</p>
+				</header>
+			</div>
+		</section>
+
+		
+		<section id="credits" class="main style3 primary">
+			<div class="content">
+				<header>
+					<h2>Credits</h2>
+					<p>We would like to thank the course instructors for equipping us with the knowledge to
+						write out a ray tracer from scratch. We would also like to thank our tutors
+						for their invaluable support and assisting us through the assignments and the rendering
+						competition. Lastly, we provide references for the links that were used as additional
+						resources for scene creation:
+					</p>
+				</header>
+				<!-- References List -->
+				<div class="references-grid">
+
+					<!-- Reference 2 -->
+					<div class="reference-item">
+						<div class="reference-text">
+							<h3>PBRT</h3>
+							<p><a href="https://pbr-book.org/4ed/contents" target="_blank">PBRT</a></p>
+							<p>Additional literature</p>
+						</div>
+					</div>
+
+					<!-- Reference 3 -->
+					<div class="reference-item">
+						<div class="reference-text">
+							<h3>Scratchapixel</h3>
+							<p><a href="https://www.scratchapixel.com/index.html" target="_blank">Scratchapixel</a></p>
+							<p>Additional literature</p>
+						</div>
+					</div>
+
+					<div class="reference-item">
+						<div class="reference-text">
+							<h3>CG1 2024</h3>
+							<p><a href="https://graphics.cg.uni-saarland.de/courses/cg1-2024/index.html" target="_blank">CG1 2024</a></p>
+							<p>Lecture notes</p>
+						</div>
+					</div>
+
+					<div class="reference-item">
+						<div class="reference-text">
+							<h3>Microfacet</h3>
+							<p><a href="https://hal.science/hal-01518344/document" target="_blank">Microfacet Models</a></p>
+							<p>For dielectric BSDFs</p>
+						</div>
+					</div>
+
+					<div class="reference-item">
+						<div class="reference-text">
+							<h3>Akalin</h3>
+							<p><a href="https://www.akalin.com/sampling-visible-sphere" target="_blank">Sphere sampling</a></p>
+							<p>For improved area light sampling</p>
+						</div>
+					</div>
+
+					<div class="reference-item">
+						<div class="reference-text">
+							<h3>RIS</h3>
+							<p><a href="https://graphics.cg.uni-saarland.de/courses/ris-2024/index.html" target="_blank">RIS 2024</a></p>
+							<p>For MIS path tracer</p>
+						</div>
+					</div>
+
+					
+					<div class="reference-text">
+					</div>
+
+					<!-- Reference 4 -->
+					<div class="reference-item">
+						<div class="reference-text">
+							<h3>VolPT</h3>
+							<p><a href="https://github.com/yumcyaWiz/volpt" target="_blank">VolPT</a></p>
+							<p>For volume path tracing</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- Footer -->
+			<footer id="footer">
+
+				<!-- Menu -->
+					<ul class="menu">
+						<li>&copy; Kshitij and Arihant</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
+					</ul>
+
+			</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.poptrox.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+			<script src="assets/js/slider.js"></script>
+			<!-- <script src="https://cdn.knightlab.com/libs/juxtapose/latest/js/juxtapose.min.js"></script> -->
+			<script>
+				var $juxtapose = $('.juxtapose'),
+					$juxtapose_container = $('.juxtapose-container'),
+					juxtapose_ratio;
+				
+				$(window).load(function(){
+				  juxtapose_ratio = $juxtapose.outerHeight() / $juxtapose.outerWidth();
+				});
+				
+				$(window).resize(function() {
+				  var new_width = $juxtapose_container.outerWidth(),
+					  new_height = new_width*juxtapose_ratio;
+				
+				  $juxtapose.css({
+					width: new_width,
+					height: new_height
+				  })
+				});
+			</script>
+	<div id="image-modal" class="modal">
+		<span class="close">&times;</span>
+		<img class="modal-content" id="modal-image" src="images/01.jpg" alt="Enlarged Story Image" />
+		<div id="caption">Story Image</div>
+	</div>
+	</body>
+</html>
