@@ -40,7 +40,7 @@
   </style>
   <text
      class="letters"
-     x="3"
+     x="0.68702698"
      y="49"
      font-family="Lato, Arial, Helvetica, sans-serif"
      font-size="34px"
@@ -50,18 +50,18 @@
   <g
      class="arrows"
      fill="none"
-     stroke-width="1.65051"
+     stroke-width="1.61022"
      stroke-linecap="square"
      stroke-linejoin="miter"
      id="g2"
-     transform="matrix(1.4551089,0,0,1.4530875,-18.758629,-6.0139562)">
+     transform="matrix(1.4915715,0,0,1.4893885,-23.900552,-7.4669865)">
     <path
        d="m 47,8 h 9 v 9"
        id="path1"
-       style="stroke-width:1.65051" />
+       style="stroke-width:1.61022" />
     <path
        d="m 41,15.5 h 8 v 8"
        id="path2"
-       style="stroke-width:1.65051" />
+       style="stroke-width:1.61022" />
   </g>
 </svg>
