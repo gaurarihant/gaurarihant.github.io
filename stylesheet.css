@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,400&family=Noto+Sans+Devanagari:wght@400&display=swap');
 
 :root {
   --paper: #f4f1ea;
@@ -172,25 +172,33 @@ h1 {
   margin: 0 0 42px -0.045em;
   position: relative;
   z-index: 1;
-  font-size: clamp(76px, 10.2vw, 132px);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  font-size: clamp(58px, 7.2vw, 94px);
   font-weight: 300;
   letter-spacing: -0.045em;
-  line-height: 0.87;
+  line-height: 0.84;
 }
 
+h1 .latin-name { white-space: nowrap; }
 h1 em { color: var(--accent); font-weight: 400; }
+h1 small { margin: 17px 0 0 .08em; color: var(--muted); font-family: 'Noto Sans Devanagari', 'Lato', sans-serif; font-size: .25em; font-weight: 400; letter-spacing: .015em; line-height: 1.35; }
+h1 small .script-slash { margin-right: .32em; color: var(--line); font-family: 'Lato', sans-serif; font-weight: 300; }
+h1 small .dev-last { color: var(--accent); }
 .hero-bio { max-width: 610px; margin-bottom: 0; color: var(--muted); font-size: 15px; line-height: 1.75; }
 .hero-bio a { color: var(--ink); border-bottom: 1px solid var(--line); }
 
 .hero-links { margin-top: 34px; display: flex; align-items: center; flex-wrap: wrap; gap: 18px 24px; }
 .hero-links > a:not(.primary-button) { color: var(--muted); font-size: 13px; font-weight: 600; border-bottom: 1px solid transparent; }
 .hero-links > a:not(.primary-button):hover { color: var(--ink); border-color: var(--ink); }
-.primary-button { padding: 12px 17px; background: var(--ink); color: white; font-size: 13px; font-weight: 600; }
+.primary-button { padding: 12px 18px; background: var(--ink); color: white; border-radius: 999px; box-shadow: 0 7px 18px rgba(24, 35, 33, .12); font-size: 13px; font-weight: 600; }
 .primary-button span { display: inline-block; margin-left: 16px; transition: transform 180ms ease; }
+.primary-button:hover { transform: translateY(-2px); box-shadow: 0 10px 24px rgba(24, 35, 33, .17); }
 .primary-button:hover span { transform: translate(2px, -2px); }
 
 .portrait-wrap { position: relative; padding: 15px 15px 0 0; }
-.portrait-wrap img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; filter: saturate(0.82) contrast(1.03); position: relative; }
+.portrait-wrap img { width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover; object-position: 50% 50%; filter: saturate(0.9) contrast(1.02); position: relative; }
 .portrait-accent { position: absolute; top: 0; right: 0; width: 74%; height: 76%; background: var(--blue); }
 .portrait-caption { padding: 18px 0 0 19%; display: flex; flex-direction: column; font-size: 12px; line-height: 1.45; }
 .portrait-caption span { color: var(--muted); }
@@ -290,7 +298,7 @@ footer h2 { margin: 0 0 10px -0.045em; font-size: clamp(60px, 9vw, 108px); font-
   .site-header nav { display: none; }
   .theme-toggle { margin-left: auto; }
   .hero { min-height: auto; padding: 68px 0 78px; grid-template-columns: 1fr; gap: 64px; }
-  h1 { font-size: clamp(76px, 22vw, 112px); line-height: .84; }
+  h1 { font-size: clamp(46px, 14vw, 88px); line-height: .88; }
   .portrait-wrap { width: min(80%, 380px); margin-left: auto; }
   .focus-section { padding: 80px 0; grid-template-columns: 1fr; gap: 35px; }
   .work-section { padding: 72px 0 90px; }
