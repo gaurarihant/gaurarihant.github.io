@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="Dual-View Frame Selection for Egocentric Long-Video Question Answering — EgoLongQA, Wearable AI Grand Challenge">
+  <meta name="keywords" content="EgoLongQA, wearable AI, egocentric video, long-video question answering, frame selection, multimodal large language models">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dual-View Frame Selection for Egocentric Long-Video Question Answering</title>
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <style>
+    /* Scale result images so their typeset text matches the page body text (16px). */
+    .fig-table-main img { width: 640px; max-width: 100%; margin: 0 auto; }
+    .fig-table-ablation img { width: 600px; max-width: 100%; margin: 0 auto; }
+    .fig-percategory img { width: 785px; max-width: 100%; margin: 0 auto; }
+    /* Center the citation block and keep the dark box snug around the BibTeX text. */
+    #citation pre { width: fit-content; max-width: 100%; margin: 0 auto; }
+  </style>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script defer src="./static/js/index.js"></script>
+</head>
+<body>
+  <header class="site-header" aria-label="Institutional links">
+    <a href="https://www.uni-saarland.de/"><img src="./assets/saarland-uni.png" alt="Saarland University"></a>
+    <a href="https://www.kth.se/en"><img src="./assets/kth-logo.svg" alt="KTH Royal Institute of Technology"></a>
+  </header>
+
+  <main>
+    <section class="hero publication-hero">
+      <div class="hero-body">
+        <div class="container is-max-desktop has-text-centered">
+          <h1 class="title is-1 publication-title">Dual-View Frame Selection for Egocentric Long-Video Question Answering</h1>
+          <div class="publication-authors is-size-5">
+            <span><a href="https://gaurarihant.github.io/">Arihant Gaur</a><sup>1</sup></span>
+            <span><a href="https://github.com/Agrover112">Ankit Grover</a><sup>2</sup></span>
+            <span><a href="https://www.linkedin.com/in/kshitij-kumar-ba7965192/">Kshitij Kumar</a><sup>1</sup></span>
+            <span><a href="https://sidharth3301.github.io/">Sidharth Nair</a><sup>1</sup></span>
+          </div>
+          <div class="publication-affiliations">
+            <span><sup>1</sup> Saarland University, Saarbr&uuml;cken, Germany</span>
+            <span><sup>2</sup> KTH Royal Institute of Technology, Stockholm, Sweden</span>
+          </div>
+          <p class="venue"><a href="https://wearable-ai-workshop.github.io/">Wearable AI Grand Challenge</a> &middot; EgoLongQA Track</p>
+          <p class="has-text-danger has-text-weight-bold is-size-5" style="margin:-0.75rem 0 1.5rem;">
+            <a href="https://huggingface.co/spaces/facebook/wearable-ai-leaderboard" title="Wearable AI Challenge Leaderboard" style="color:inherit;">Team <em>kth_saar</em> &middot; Ranked 4th (Large Model Division)</a>
+          </p>
+          <div class="publication-links">
+            <!-- TODO: replace # with the paper URL -->
+            <a href="#" class="button is-medium is-rounded is-dark"><span class="icon"><i class="fas fa-file-pdf"></i></span><span>Paper</span></a>
+            <a href="https://github.com/Agrover112/wearable-ai-eccv" class="button is-medium is-rounded is-dark"><span class="icon"><i class="fab fa-github"></i></span><span>Code</span></a>
+          </div>
+
+          <figure class="teaser-figure">
+            <img src="./assets/method_figure.png" alt="Overview of the dual-view frame-selection method: a uniform view samples the full timeline while a query-conditioned view retrieves question-relevant frames before late fusion">
+          </figure>
+          <p class="teaser-caption"><strong>We present a training-free dual-view method for long egocentric video QA.</strong> The uniform branch samples the complete timeline, while the query-conditioned branch retrieves question-relevant evidence with local temporal context. Qwen3.5-27B decodes both views independently, and separate one-step scoring calls provide the label distributions used for late fusion when the answers disagree.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-soft" id="abstract">
+      <div class="container is-max-desktop">
+        <h2 class="title is-2 has-text-centered">Abstract</h2>
+        <div class="content abstract-text has-text-justified">
+          <p>EgoLongQA, the long-video question-answering track of the Wearable AI Grand Challenge, requires answering multiple-choice questions about long-form egocentric videos. Multimodal large language models (MLLMs) can inspect only a small fraction of the recorded frames. We present a training-free method with complementary uniform and query-conditioned views. The uniform view samples the complete timeline uniformly, while the query-conditioned view retrieves relevant frames with local temporal context. The MLLM Qwen3.5-27B independently decodes an answer from each view, and on disagreements we apply output-level late fusion by averaging the normalized answer-label distributions. Model scaling produces the largest gain, raising accuracy from 73.43% to 86.86% under uniform sampling. The uniform view preserves coverage of the full recording, whereas the query-conditioned view recovers brief evidence that uniform sampling can miss. Combining them reaches 88.29% on public validation and 86.58% on the hidden test set.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="results">
+      <div class="container is-max-widescreen">
+        <h2 class="title is-2 has-text-centered">Experimental Results</h2>
+
+        <div class="result-group">
+          <div class="result-copy">
+            <p class="eyebrow">Main Results</p>
+            <h3 class="title is-3">Dual-View Selection on EgoLongQA</h3>
+            <p>Increasing the frame budget and resolution lifts the Qwen3-VL-8B starter setup from 53.00% to 73.43%. Under the same uniform-view formulation, Qwen3.5-27B reaches 86.86%, and mean-probability late fusion with the query-conditioned view reaches 88.29% on the 700-question validation split. The submitted system scores 86.58% on the hidden test set.</p>
+          </div>
+          <figure class="full-result-figure fig-table-main">
+            <img src="./assets/table_main_results.png" alt="EgoLongQA validation accuracy for increasing frame budget and resolution, the two evidence views, and late fusion" loading="lazy">
+            <figcaption>Progression on the public EgoLongQA validation split. Uniform counts frames assigned by fixed temporal grids, and fusion uses two independent 64-frame calls.</figcaption>
+          </figure>
+        </div>
+
+        <div class="result-group">
+          <div class="result-copy">
+            <p class="eyebrow">Ablations</p>
+            <h3 class="title is-3">Sampling, Retrieval, and Fusion</h3>
+            <p>On a balanced 140-question development set, the 64-frame endpoint-inclusive grid is the strongest single view, while interval-aligned grids and smaller budgets lose accuracy. Retrieval variants, including maximal marginal relevance and reciprocal-rank fusion, do not recover the loss, and probability fusion is the only variant that improves on the reference.</p>
+          </div>
+          <figure class="full-result-figure fig-table-ablation">
+            <img src="./assets/table_ablations.png" alt="Ablations on a 140-question development set: sampling grids, retrieval variants, and fusion rules" loading="lazy">
+            <figcaption>Accuracy on the 140-question development set. &Delta; is the difference in percentage points from the 64-frame endpoint-inclusive uniform reference.</figcaption>
+          </figure>
+        </div>
+
+        <div class="result-group">
+          <div class="result-copy">
+            <p class="eyebrow">Per-Category Accuracy</p>
+            <h3 class="title is-3">Where the Two Views Complement</h3>
+            <p>The two views fail on different categories. Fusion improves over the uniform view most clearly on Sightseeing and loses the most on Events and Fashion Advice, while Shopping, Gardening, and Daily Activities remain the weakest categories.</p>
+          </div>
+          <figure class="full-result-figure fig-percategory">
+            <img src="./assets/per_category.png" alt="Per-category accuracy for the uniform view, the query-conditioned view, and their fusion on the full validation split" loading="lazy">
+            <figcaption>Option accuracy by scene category on the full validation split for the uniform view, the query-conditioned view, and their fusion.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-soft" id="citation">
+      <div class="container is-max-desktop">
+        <h2 class="title is-2 has-text-centered">Citation</h2>
+        <pre><code>@inproceedings{gaur2026dualview,
+  title     = {Dual-View Frame Selection for Egocentric Long-Video Question Answering},
+  author    = {Gaur, Arihant and Grover, Ankit and Kumar, Kshitij and Nair, Sidharth},
+  booktitle = {Wearable AI Workshop, European Conference on Computer Vision (ECCV)},
+  year      = {2026}
+}</code></pre>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <div class="container is-max-desktop has-text-centered">
+        <h2 class="title is-2">Contact</h2>
+        <p class="contact-intro">For questions or clarifications, please contact the corresponding author:</p>
+        <div class="contact-list">
+          <div class="contact-person">
+            <strong>Ankit Grover</strong>
+            <a href="mailto:agrover112@gmail.com">agrover112@gmail.com</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="content has-text-centered">
+      <a href="https://4dqv.mpi-inf.mpg.de/NeuralGarSim/">NeuralGarSim</a>
+      <span aria-hidden="true">&middot;</span>
+      <a href="https://nerfies.github.io/">Design Template</a>
+    </div>
+  </footer>
+</body>
+</html>
